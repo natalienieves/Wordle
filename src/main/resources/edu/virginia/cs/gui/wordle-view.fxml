@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="433.0" prefWidth="455.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.cs.gui.WordleController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="WORDLE" alignment="CENTER" prefHeight="43.0" prefWidth="162.0" text="WORDLE">
+        <font>
+            <Font name="Arial Black" size="24.0" />
+        </font>
+        <textFill>
+            <LinearGradient endX="0.8669833729216152" endY="1.0" startX="0.3182897862232779">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="0.13779239356517792" green="0.7631579041481018" blue="0.1482151597738266" />
+                        </color>
+                    </Stop>
+                    <Stop offset="0.006711409395973154">
+                        <color>
+                            <Color red="0.13779239356517792" green="0.7631579041481018" blue="0.1482151597738266" />
+                        </color>
+                    </Stop>
+                    <Stop offset="0.16778523489932876">
+                        <color>
+                            <Color red="0.8491175174713135" green="0.8899999856948853" blue="0.10679999738931656" />
+                        </color>
+                    </Stop>
+                    <Stop offset="0.31543624161073824">
+                        <color>
+                            <Color red="0.6315789222717285" green="0.6315789222717285" blue="0.6315789222717285" />
+                        </color>
+                    </Stop>
+                    <Stop offset="0.4563758389261745">
+                        <color>
+                            <Color red="0.13779239356517792" green="0.7631579041481018" blue="0.1482151597738266" />
+                        </color>
+                    </Stop>
+                    <Stop offset="0.5789818300867571">
+                        <color>
+                            <Color red="0.8412799835205078" green="0.8799999952316284" blue="0.10559999942779541" />
+                        </color>
+                    </Stop>
+                    <Stop offset="0.7114093959731543">
+                        <color>
+                            <Color red="0.6315789222717285" green="0.6315789222717285" blue="0.6315789222717285" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color red="0.6315789222717285" green="0.6315789222717285" blue="0.6315789222717285" />
+                        </color>
+                    </Stop>
+                </stops>
+            </LinearGradient>
+        </textFill></Label>
+
+    <Label fx:id="state_of_game" prefHeight="43.0" prefWidth="200.0" text="">
+        <font>
+            <Font name="Arial Black" size="11.0" />
+        </font></Label>
+    <Label fx:id="ERROR" alignment="BOTTOM_RIGHT" prefHeight="10" prefWidth="200.0" text="">
+        <font>
+            <Font name="Arial Black" size="11.0" />
+        </font></Label>
+
+    <GridPane prefHeight="198.0" prefWidth="417.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <children>
+            <TextField fx:id="Grid1" onKeyReleased="#enterYourGuess" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="Grid2" onKeyReleased="#enterYourGuess" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <TextField fx:id="Grid3" onKeyReleased="#enterYourGuess" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+            <TextField fx:id="Grid4" onKeyReleased="#enterYourGuess" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+            <TextField fx:id="Grid5" onKeyReleased="#enterYourGuess" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+            <TextField fx:id="Grid6" onKeyReleased="#enterYourGuess" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="Grid7" onKeyReleased="#enterYourGuess" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="Grid8" onKeyReleased="#enterYourGuess" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="Grid9" onKeyReleased="#enterYourGuess" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="Grid10" onKeyReleased="#enterYourGuess" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <TextField fx:id="Grid11" onKeyReleased="#enterYourGuess" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="Grid12" onKeyReleased="#enterYourGuess" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="Grid13" onKeyReleased="#enterYourGuess" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="Grid14" onKeyReleased="#enterYourGuess" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="Grid15" onKeyReleased="#enterYourGuess" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <TextField fx:id="Grid16" onKeyReleased="#enterYourGuess" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="Grid17" onKeyReleased="#enterYourGuess" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="Grid18" onKeyReleased="#enterYourGuess" GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+            <TextField prefHeight="32.0" prefWidth="83.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <TextField fx:id="Grid19" onKeyReleased="#enterYourGuess" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextField fx:id="Grid20" onKeyReleased="#enterYourGuess" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <TextField fx:id="Grid21" onKeyReleased="#enterYourGuess" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="Grid22" onKeyReleased="#enterYourGuess" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField prefHeight="9.0" prefWidth="60.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <TextField fx:id="Grid23" onKeyReleased="#enterYourGuess" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField fx:id="Grid24" onKeyReleased="#enterYourGuess" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <TextField fx:id="Grid25" onKeyReleased="#enterYourGuess" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <TextField fx:id="Grid26" onKeyReleased="#enterYourGuess" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <TextField fx:id="Grid27" onKeyReleased="#enterYourGuess" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="Grid28" onKeyReleased="#enterYourGuess" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField fx:id="Grid29" onKeyReleased="#enterYourGuess" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <TextField fx:id="Grid30" onKeyReleased="#enterYourGuess" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+        </children>
+    </GridPane>
+
+    <Label fx:id="propmtedQuestion" prefHeight="5.0" prefWidth="219.0" text="Do you want to play again?" visible="false">
+        <font>
+            <Font name="Arial Black" size="18.0" />
+        </font>
+    </Label>
+    <children>
+        <Button fx:id="YES"  onKeyReleased="#onYesButtonClick" text="YES" visible="false"/>
+        <Button fx:id="NO" onKeyReleased="#onNoButtonClick" text="NO" visible="false"/>
+    </children>
+    <Button mnemonicParsing="false" text="YES" visible="false" />
+    <Button mnemonicParsing="false" text="NO" visible="false" />
+</VBox>
+
+
